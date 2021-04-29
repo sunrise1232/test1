@@ -1,0 +1,52 @@
+﻿@using Sunrise2._0.Storage.Entity
+@model IEnumerable<Tour>
+
+@{
+    ViewData["Title"] = "Туры";
+}
+
+
+<div class="service">
+    <div class="container">
+        <h3 class="service__title">Каталог</h3>
+        <div class="service__descr">A responsive, retina-ready & wide multipurpose template.</div>
+    </div>
+</div>
+
+
+<section class="catalog">
+    <div class="container">
+        <aside class="catalog__aside">
+        </aside>
+
+        <div class="catalog__content">
+            <div class="row">
+
+
+
+                @foreach (var t in Model)
+                {
+                    <div class="col-md-6">
+                        <a href="~/Catalog/Buy/@t.Id" class="catalog-item">
+                            <div class="catalog-item__img">
+                                <img src="img/slider/slide1.jpg" alt="">
+                            </div>
+                            <div class="catalog-item__content">
+                                <div class="catalog-item__title">@t.Hotel.Name</div>
+                                <div class="catalog-item__city">@t.Hotel.Town.Region.Name, @t.Hotel.Town.Name</div>
+                                <div class="catalog-item__price">
+                                    @t.Price
+                                    <span class="price__currency">РУБ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

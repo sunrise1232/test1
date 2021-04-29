@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "213";
+}
+
+<div class="tour">
+
+
+    <div class="container">
+        <div class="tour__dialog">
+            <div class="tour__right">
+                <div class="modalCarousel tour__carousel">
+                    <div class="carousel__item"><img src="~/img/promo/hill.png" alt="img"></div>
+                    <div class="carousel__item"><img src="~/img/slider/slide1.jpg" alt="img"></div>
+                    <div class="carousel__item"><img src="~/img/slider/slide1.jpg" alt="img"></div>
+                </div>
+                <div class="tour__title">@ViewBag.TourId</div>
+                <div class="tour__descr">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber [...]</div>
+                <div class="tour__rating">
+                    10
+                    <i class="far fa-heart"></i>
+                </div>
+
+            </div>
+            <div class="tour__left">
+                количество человек
+                <input type="range">
+                <div class="tour__price">999 999 <span>USD</span></div>
+                <button class="button tour__button">Продолжить</button>
+            </div>
+            <i class="fas fa-times modal__close"></i>
+        </div>
+
+
+
+    </div>
+
+</div>
